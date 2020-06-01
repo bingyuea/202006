@@ -1,0 +1,16 @@
+{
+  "retObj":{
+    "hourList":[
+      {
+        "HOUR_INTERVAL":"8:00~10:00"
+      }
+    ],
+    "result": [
+      {
+        "DATA_DATE": "2020/06/01",
+        "FAIL_COUNT": 0,
+        "HOUR_INTERVAL":"8:00~10:00"
+      }
+    ]
+  }
+}

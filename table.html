@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Frozen Columns in DataGrid - jQuery EasyUI Demo</title>
+  <link rel="stylesheet" type="text/css" href="./themes/default/easyui.css">
+  <link rel="stylesheet" type="text/css" href="./themes/icon.css">
+  <link rel="stylesheet" type="text/css" href="./demo/demo.css">
+  <script type="text/javascript" src="./jquery.min.js"></script>
+  <script type="text/javascript" src="./jquery.easyui.min.js"></script>
+</head>
+<body>
+<table id = 'dg' class="easyui-datagrid" style="width:600px;height:250px">
+  <thead data-options="frozen:true">
+<!--  <tr>-->
+<!--    <th data-options="field:'itemid',width:80" rowspan="2">Item ID</th>-->
+<!--    <th data-options="field:'productid',width:100" rowspan="2">Product</th>-->
+<!--    <th colspan="4">Item Details</th>-->
+<!--  </tr>-->
+  <!--<tr>
+    <th data-options="field:'listprice',width:80,align:'right'">List Price</th>
+    <th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
+    <th data-options="field:'attr1',width:240">Attribute</th>
+    <th data-options="field:'status',width:60,align:'center'">Status</th>
+  </tr>-->
+  </thead>
+</table>
+
+</body>
+<script>
+  $('#dg').datagrid({
+    url:'data.json',
+    columns:[
+      [
+      {field:'itemid',title:'Item ID',rowspan:2,width:80,},
+      {field:'productid',title:'Product ID',rowspan:2,width:80,},
+      {title:'Item Details',colspan:4}
+    ],[
+      {field:'listprice',title:'List Price',width:80,align:'right',},
+      {field:'unitcost',title:'Unit Cost',width:80,align:'right',},
+      {field:'attr1',title:'Attribute',width:100},
+      {field:'status',title:'Status',width:60}
+    ]],
+    frozenColumns:[
+      [
+      {field:'itemid',title:'itemid',rowspan:3,colspan:1},
+      {field:'productid',title:'productid',rowspan:3,colspan:1},
+      {field:'productid',title:'productid',rowspan:2,colspan:2},
+      {field:'productid',title:'productid',rowspan:2,colspan:2},
+      {field:'price',title:'price',rowspan:1,colspan:3,}
+      ],
+      [
+        {field:'listprice',title:'List Price',align:'right',},
+        {field:'unitcost',title:'Unit Cost',align:'right',},
+        {field:'attr1',title:'Attribute',},
+        {field:'status',title:'Status',}
+      ],
+      [
+        {field:'listprice',title:'List Price',align:'right',},
+        {field:'unitcost',title:'Unit Cost',align:'right',},
+        {field:'attr1',title:'Attribute',},
+        {field:'status',title:'Status',}
+      ],
+      [
+        {field:'listprice',title:'List Price',align:'right',},
+        {field:'unitcost',title:'Unit Cost',align:'right',},
+        {field:'attr1',title:'Attribute',},
+        {field:'status',title:'Status',}
+      ]]
+  });
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    table th,table td{
+      border:1px solid #aaa;
+    }
+    table{
+      border-collapse:collapse;
+    }
+
+  </style>
+</head>
+<body>
+<div class="tableWrap" style="margin:20px;width:316px;">
+  <label>可滚动表格——表格宽度自动每列宽度设置<col></label>
+  <table class="table-thead" id="#tblForm">
+    <colgroup>
+      <col width="50">
+      <col width="100">
+      <col width="150">
+      <col width="17">
+    </colgroup>
+    <thead>
+    <tr>
+      <th>序号</th>
+      <th>账户名称</th>
+      <th>账户编号</th>
+      <th></th>
+    </tr>
+    </thead>
+  </table>
+  <div class="comTbody" style="height:90px;overflow:auto;border:1px solid #ddd">
+    <table class="table-tbody" style="border-top: 0;">
+      <colgroup>
+        <col width="50">
+        <col width="100">
+        <col width="150">
+      </colgroup>
+      <tbody>
+      <tr>
+        <td>1</td>
+        <td>中国电信</td>
+        <td>12312312313132</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>中国电信</td>
+        <td>12312312313132</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>中国电信</td>
+        <td>12312312313132</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>中国电信</td>
+        <td>12312312313132</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>中国电信</td>
+        <td>12312312313132</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="./jquery.min.js"></script>
+
+<script src="./index.js"></script>
+</html>
